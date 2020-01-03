@@ -5,7 +5,7 @@ class Navigation extends Component {
         return (
             <nav id="navbar" className="navbar sticky-top justify-content-center">
                 <ul className="nav">
-                    <li><a href="#home">Home</a></li>
+                    <li><a href="#content-wrap">Home</a></li>
                     <li><a href="#iAm">I am</a></li>
                     <li><a href="#iCan">I can</a></li>
                     <li><a href="#contact">Contact</a></li>

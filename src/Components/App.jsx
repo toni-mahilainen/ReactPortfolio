@@ -11,12 +11,12 @@ class App extends Component {
     componentDidMount() {
         var nav = document.getElementById("navbar");
 
-        window.onscroll = function() {
-            if (window.pageYOffset > 20) {
-            nav.style.background = "transparent";
-        } else {
-            nav.style.background = "#f5f5dc";
-        }
+        window.onscroll = function () {
+            if (window.pageYOffset > 75) {
+                nav.style.background = "transparent";
+            } else {
+                nav.style.background = "#333";
+            }
         }
     }
 
