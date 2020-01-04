@@ -114,6 +114,7 @@ nav a {
   margin-left: 40px;
   padding: 20px 20px;
   background-color: rgba(51,3,0,0.4);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.6);
 }
 
 #iamRight {
@@ -125,6 +126,7 @@ nav a {
   margin-right: 40px;
   padding: 20px 20px;
   background-color: rgba(51,3,0,0.4);
+  box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.6);
 }
 
 /* --------------------------------I AM-------------------------------- */
@@ -147,6 +149,32 @@ nav a {
   background: url(backContact.jpg);
   background-size: 100% 100%;
   color: darkturquoise;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#contactFormTainer {
+  text-align: center;
+  height: 85vh;
+  width: 33%;
+  align-self: center;
+  margin-left: 50px;
+  padding: 20px 20px;
+  border-radius: 20px;
+  background-color: rgba(97, 97, 97, 0.4);
+  box-shadow: 5px -5px 5px 5px rgba(255, 255, 255, 0.4);
+}
+
+#contactInfo {
+  text-align: center;
+  height: 30vh;
+  width: 50%;
+  margin-top: 50px;
+  padding: 20px 20px;
+  border-radius: 20px;
+  background-color: rgba(97, 97, 97, 0.4);
+  box-shadow: 5px -5px 5px 5px rgba(255, 255, 255, 0.4);
 }
 
 /* --------------------------------CONTACT-------------------------------- */

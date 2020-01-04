@@ -6,7 +6,10 @@ class Contact extends Component {
         return (
             <section>
                 <Jumbotron bsPrefix="contactJumbo" id="contact">
-                    <Container>
+                    <Container id="contactFormTainer">
+                        <h1>Contact</h1>
+                    </Container>
+                    <Container id="contactInfo">
                         <h1>Contact</h1>
                     </Container>
                 </Jumbotron>
