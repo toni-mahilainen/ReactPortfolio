@@ -74,6 +74,7 @@ nav a {
 }
 
 .headerJumbo .container {
+  text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -98,6 +99,32 @@ nav a {
   min-height: 100vh;
   background: url(backIam.jpg);
   background-size: 100% 100%;
+  color: darkturquoise;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#iamLeft {
+  text-align: center;
+  height: 85vh;
+  width: 33%;
+  border-radius: 20px;
+  align-self: center;
+  margin-left: 40px;
+  padding: 20px 20px;
+  background-color: rgba(51,3,0,0.4);
+}
+
+#iamRight {
+  text-align: center;
+  height: 85vh;
+  width: 33%;
+  border-radius: 20px;
+  align-self: center;
+  margin-right: 40px;
+  padding: 20px 20px;
+  background-color: rgba(51,3,0,0.4);
 }
 
 /* --------------------------------I AM-------------------------------- */
@@ -108,6 +135,7 @@ nav a {
   min-height: 100vh;
   background: url(backIcan.jpg);
   background-size: 100% 100%;
+  color: darkturquoise;
 }
 
 /* --------------------------------I CAN-------------------------------- */
@@ -118,6 +146,7 @@ nav a {
   min-height: 100vh;
   background: url(backContact.jpg);
   background-size: 100% 100%;
+  color: darkturquoise;
 }
 
 /* --------------------------------CONTACT-------------------------------- */
@@ -127,6 +156,7 @@ nav a {
 .footerJumbo {
   min-height: 10vh;
   background-color: #333;
+  color: darkturquoise;
 }
 
 /* --------------------------------FOOTER-------------------------------- */
@@ -139,10 +169,6 @@ html {
 
 * {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.container {
-  text-align: center;
 }
 
 /* #root {

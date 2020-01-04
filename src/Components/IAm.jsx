@@ -4,11 +4,16 @@ import { Jumbotron, Container } from 'react-bootstrap';
 class IAm extends Component {
     render() {
         return (
-            <Jumbotron bsPrefix="iamJumbo" id="iAm">
-                <Container>
-                    <h1>I´m</h1>
-                </Container>
-            </Jumbotron>
+            <section>
+                <Jumbotron bsPrefix="iamJumbo" id="iAm">
+                    <Container id="iamLeft">
+                        <h1>Testi</h1>
+                    </Container>
+                    <Container id="iamRight">
+                        <h1>Testi</h1>
+                    </Container>
+                </Jumbotron>
+            </section>
         )
     }
 }

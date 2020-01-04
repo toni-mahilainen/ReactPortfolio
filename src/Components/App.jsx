@@ -13,16 +13,17 @@ class App extends Component {
 
         window.onscroll = function () {
             if (window.pageYOffset > 75) {
-                nav.style.background = "transparent";
+                nav.style.background = "rgba(51,3,0,0.4)"
             } else {
                 nav.style.background = "#333";
+                nav.style.opacity = "1.0";
             }
         }
     }
 
     render() {
         return (
-            <div id="content-wrap">
+            <div id="home">
                 <Navigation />
                 <Header />
                 <IAm />
