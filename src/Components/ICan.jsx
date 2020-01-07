@@ -6,7 +6,7 @@ class ICan extends Component {
         return (
             <section>
                 <Jumbotron bsPrefix="iCanJumbo" id="iCan">
-                    <Container>
+                    <Container id="iCanList">
                         <h1>I Can</h1>
                     </Container>
                 </Jumbotron>

@@ -106,8 +106,7 @@ nav a {
 }
 
 #iamLeft {
-  text-align: center;
-  height: 85vh;
+  height: 80vh;
   width: 33%;
   border-radius: 20px;
   align-self: center;
@@ -117,9 +116,25 @@ nav a {
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.6);
 }
 
+#iamLeft img {
+  float: left;
+  margin: 10px;
+}
+
+#iamLeft ul {
+  float: left;
+  margin: 10px;
+  line-height: 30px;
+  font-size: 1.1rem;
+}
+
+.myInfoListHeaders {
+  color: rgb(212, 184, 169);
+}
+
 #iamRight {
   text-align: center;
-  height: 85vh;
+  height: 80vh;
   width: 33%;
   border-radius: 20px;
   align-self: center;
@@ -138,6 +153,20 @@ nav a {
   background: url(backIcan.jpg);
   background-size: 100% 100%;
   color: darkturquoise;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#iCanList {
+  height: 80vh;
+  width: 25%;
+  align-self: center;
+  margin-left: 50px;
+  padding: 20px 20px;
+  border-radius: 20px;
+  background-color: rgba(97, 97, 97, 0.4);
+  box-shadow: 5px -5px 5px 5px rgba(255, 255, 255, 0.4);
 }
 
 /* --------------------------------I CAN-------------------------------- */
@@ -156,7 +185,7 @@ nav a {
 
 #contactFormTainer {
   text-align: center;
-  height: 85vh;
+  height: 80vh;
   width: 33%;
   align-self: center;
   margin-left: 50px;
@@ -168,9 +197,9 @@ nav a {
 
 #contactInfo {
   text-align: center;
-  height: 30vh;
+  height: 25vh;
   width: 50%;
-  margin-top: 50px;
+  margin-top: 95px;
   padding: 20px 20px;
   border-radius: 20px;
   background-color: rgba(97, 97, 97, 0.4);
@@ -182,9 +211,21 @@ nav a {
 /* --------------------------------FOOTER-------------------------------- */
 
 .footerJumbo {
-  min-height: 10vh;
+  min-height: 20vh;
   background-color: #333;
   color: darkturquoise;
+  text-align: center;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#footerLeft {
+  align-self: center;
+}
+
+#footerRight {
+  align-self: center;
 }
 
 /* --------------------------------FOOTER-------------------------------- */
