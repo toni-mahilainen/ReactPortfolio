@@ -129,7 +129,7 @@ nav a {
 }
 
 .myInfoListHeaders {
-  color: rgb(212, 184, 169);
+  color: rgb(231, 203, 187);
 }
 
 #iamRight {
@@ -142,6 +142,19 @@ nav a {
   padding: 20px 20px;
   background-color: rgba(51,3,0,0.4);
   box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.6);
+}
+
+#iamRight p {
+  color: rgb(231, 203, 187);
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.showDetailsBtn {
+  background-color: transparent;
+  border: none;
+  color: darkturquoise;
 }
 
 /* --------------------------------I AM-------------------------------- */
