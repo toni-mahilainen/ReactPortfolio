@@ -13,11 +13,28 @@ class Contact extends Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChangeInput = this.handleChangeInput.bind(this);
+        this.contactToBackend = this.contactToBackend.bind(this);
+        this.clearInputs = this.clearInputs.bind(this);
     }
 
-    handleSubmit() {
+    handleSubmit(event) {
+        event.preventDefault();
+        this.contactToBackend();
+    }
+
+    clearInputs() {
+        let inputs = document.getElementsByClassName("contactInput");
+        console.log(inputs);
+
+        inputs[0].value = "";
+        inputs[1].value = "";
+        inputs[2].value = "";
+        inputs[3].value = "";
+    }
+
+    contactToBackend() {
         let uri = "https://emailsendercore.azurewebsites.net//api/email";
-        
+
         const messageObj = {
             name: this.state.Name,
             emailAddress: this.state.Email,
@@ -35,12 +52,12 @@ class Contact extends Component {
             if (response.status >= 200 && response.status < 300) {
                 // alertin tilalle viesti käyttäjällä käyttöliittymään
                 alert("Email sent, awesome!");
+                this.clearInputs();
             } else {
                 alert("Oops, something went wrong. Try again")
             }
         })
     }
-
 
     handleChangeInput(input) {
         let inputField = input.target.id;
@@ -84,21 +101,29 @@ class Contact extends Component {
             <section>
                 <Jumbotron bsPrefix="contactJumbo" id="contact">
                     <Container id="contactFormTainer">
-                        <h1>Contact</h1>
-                        <form onSubmit={this.handleSubmit}>
-                            Name<br />
-                            <input type="text" id="name" onChange={this.handleChangeInput}></input><br />
-                            Email<br />
-                            <input type="text" id="email" onChange={this.handleChangeInput}></input><br />
-                            Subject<br />
-                            <input type="text" id="subject" onChange={this.handleChangeInput}></input><br />
-                            Message<br />
-                            <input type="text" id="message" onChange={this.handleChangeInput}></input><br />
-                            <button type="submit">Submit</button>
-                        </form>
+                        <h2>Contact me with email...</h2>
+                        <div id="contactForm">
+                            <form onSubmit={this.handleSubmit}>
+                                Name<br />
+                                <input type="text" className="contactInput" id="name" onChange={this.handleChangeInput}></input><br />
+                                Email<br />
+                                <input type="text" className="contactInput" id="email" onChange={this.handleChangeInput}></input><br />
+                                Subject<br />
+                                <input type="text" className="contactInput" id="subject" onChange={this.handleChangeInput}></input><br />
+                                Message<br />
+                                <textarea type="text" className="contactInput" id="message" onChange={this.handleChangeInput}></textarea><br />
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
                     </Container>
                     <Container id="contactInfo">
-                        <h1>Contact</h1>
+                        <h2>...or in social media</h2>
+                        <div id="socialMediaIcons">
+                            <a href="https://www.linkedin.com/in/toni-mahilainen-a56b1b157/" target="_blank" rel="noopener noreferrer"><span className="fab fa-linkedin"></span></a>
+                            <a href="https://github.com/point-toni-mahilainen" target="_blank" rel="noopener noreferrer"><span className="fab fa-github"></span></a>
+                            <a href="https://www.facebook.com/toni.mahilainen" target="_blank" rel="noopener noreferrer"><span className="fab fa-facebook"></span></a>
+                            <a href="https://www.instagram.com/toni_mahilainen/" target="_blank" rel="noopener noreferrer"><span className="fab fa-instagram"></span></a>
+                        </div>
                     </Container>
                 </Jumbotron>
             </section>

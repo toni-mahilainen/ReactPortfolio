@@ -151,10 +151,11 @@ nav a {
   margin: 5px 0;
 }
 
-.showDetailsBtn {
+#iamRight button {
   background-color: transparent;
   border: none;
   color: darkturquoise;
+  outline: none;
 }
 
 /* --------------------------------I AM-------------------------------- */
@@ -182,6 +183,39 @@ nav a {
   box-shadow: 5px -5px 5px 5px rgba(255, 255, 255, 0.4);
 }
 
+#iCanExamples {
+  text-align: center;
+  height: 80vh;
+  width: 75%;
+  align-self: center;
+  padding: 20px 20px;
+  border-radius: 20px;
+  background-color: rgba(83, 83, 83, 0.5);
+  box-shadow: -5px -5px 5px 5px rgba(255, 255, 255, 0.4);
+}
+
+#iCanList h2 {
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+#iCanList ul {
+  letter-spacing: 1px;
+}
+
+#iCanList li {
+  width: 100%;
+  padding: 15px 0;
+}
+
+#iCanList li button {
+  float: right;
+  background-color: transparent;
+  border: none;
+  color: darkturquoise;
+  outline: none;
+}
+
 /* --------------------------------I CAN-------------------------------- */
 
 /* --------------------------------CONTACT-------------------------------- */
@@ -196,6 +230,10 @@ nav a {
   justify-content: space-between;
 }
 
+.contactJumbo h2 {
+  letter-spacing: 2px;
+}
+
 #contactFormTainer {
   text-align: center;
   height: 80vh;
@@ -208,6 +246,47 @@ nav a {
   box-shadow: 5px -5px 5px 5px rgba(255, 255, 255, 0.4);
 }
 
+#contactForm {
+  text-align: left;
+  padding: 20px;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+}
+
+#contactForm button {
+  background-color: rgba(0, 130, 133, 0.8);
+  color: darkturquoise;
+  width: 25%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px -1px 3px 2px rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px;
+}
+
+#contactForm button:hover {
+  box-shadow: inset -1px 1px 1px 2px rgba(0, 0, 0, 1.0);
+  font-size: 1.2rem;
+}
+
+.contactInput {
+  margin: 10px 0;
+  width: 100%;
+  height: 5vh;
+  padding: 10px;
+  color: rgb(231, 203, 187);
+  background-color: rgba(0, 130, 133, 0.8);
+  border: none;
+  border-radius: 10px;
+  box-shadow: inset -2px 2px 3px 2px rgb(36, 36, 36);
+  outline: none;
+}
+
+#message {
+  height: 15vh;
+  padding-top: 12px;
+}
+
 #contactInfo {
   text-align: center;
   height: 25vh;
@@ -217,6 +296,16 @@ nav a {
   border-radius: 20px;
   background-color: rgba(97, 97, 97, 0.4);
   box-shadow: 5px -5px 5px 5px rgba(255, 255, 255, 0.4);
+}
+
+.fab {
+  font-size: 5rem;
+  padding: 30px 40px;
+  color: darkturquoise;
+}
+
+.fab:hover {
+  color: rgba(0, 162, 165, 0.8);
 }
 
 /* --------------------------------CONTACT-------------------------------- */
