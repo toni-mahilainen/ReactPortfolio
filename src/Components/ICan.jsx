@@ -7,60 +7,90 @@ class Examples extends Component {
             return (
                 <Container id="iCanExamples">
                     <h1>C#</h1>
+                    <div className="skillLevelBar">
+                        <span className="skillLevel" style={{width: "10%"}}><h5>Skill level</h5></span>
+                    </div>
                 </Container>
             )
         } else if (this.props.exampleRequest === "htmletc") {
             return (
                 <Container id="iCanExamples">
                     <h1>HTML5 - CSS3 - JavaScript / TypeScript / jQuery</h1>
+                    <div className="skillLevelBar">
+                        <span className="skillLevel" style={{width: "20%"}}><h5>Skill level</h5></span>
+                    </div>
                 </Container>
             )
         } else if (this.props.exampleRequest === "bootstrap") {
             return (
                 <Container id="iCanExamples">
                     <h1>Bootstrap</h1>
+                    <div className="skillLevelBar">
+                        <span className="skillLevel" style={{width: "30%"}}><h5>Skill level</h5></span>
+                    </div>
                 </Container>
             )
         } else if (this.props.exampleRequest === "mvc") {
             return (
                 <Container id="iCanExamples">
                     <h1>ASP.NET MVC</h1>
+                    <div className="skillLevelBar">
+                        <span className="skillLevel" style={{width: "40%"}}><h5>Skill level</h5></span>
+                    </div>
                 </Container>
             )
         } else if (this.props.exampleRequest === "core") {
             return (
                 <Container id="iCanExamples">
                     <h1>ASP.NET Core</h1>
+                    <div className="skillLevelBar">
+                        <span className="skillLevel" style={{width: "50%"}}><h5>Skill level</h5></span>
+                    </div>
                 </Container>
             )
         } else if (this.props.exampleRequest === "sql") {
             return (
                 <Container id="iCanExamples">
                     <h1>SQL Server</h1>
+                    <div className="skillLevelBar">
+                        <span className="skillLevel" style={{width: "60%"}}><h5>Skill level</h5></span>
+                    </div>
                 </Container>
             )
         } else if (this.props.exampleRequest === "reactnode") {
             return (
                 <Container id="iCanExamples">
                     <h1>React.js - Node.js</h1>
+                    <div className="skillLevelBar">
+                        <span className="skillLevel" style={{width: "70%"}}><h5>Skill level</h5></span>
+                    </div>
                 </Container>
             )
         } else if (this.props.exampleRequest === "xamarin") {
             return (
                 <Container id="iCanExamples">
                     <h1>Xamarin Forms</h1>
+                    <div className="skillLevelBar">
+                        <span className="skillLevel" style={{width: "80%"}}><h5>Skill level</h5></span>
+                    </div>
                 </Container>
             )
         } else if (this.props.exampleRequest === "azure") {
             return (
                 <Container id="iCanExamples">
                     <h1>Azure</h1>
+                    <div className="skillLevelBar">
+                        <span className="skillLevel" style={{width: "90%"}}><h5>Skill level</h5></span>
+                    </div>
                 </Container>
             )
         } else if (this.props.exampleRequest === "github") {
             return (
                 <Container id="iCanExamples">
                     <h1>GitHub</h1>
+                    <div className="skillLevelBar">
+                        <span className="skillLevel" style={{width: "100%"}}><h5>Skill level</h5></span>
+                    </div>
                 </Container>
             )
         } else {
@@ -93,9 +123,22 @@ class ICan extends Component {
     }
 
     ShowHideExamples(btn) {
+        this.setState({
+            CSharpVisible: false,
+            HtmlEtcVisible: false,
+            BootstrapVisible: false,
+            MvcVisible: false,
+            CoreVisible: false,
+            SqlVisible: false,
+            ReactNodeVisible: false,
+            XamarinVisible: false,
+            AzureVisible: false,
+            GitHubVisible: false
+        });
+
         let btnId = btn.target.id;
         console.log(btnId);
-        
+
         // Painikkeen perusteella näytetään/piilotetaan oikeat lisätiedot
         if (btnId === "csharp") {
             switch (this.state.CSharpVisible) {
