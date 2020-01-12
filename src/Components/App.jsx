@@ -19,7 +19,7 @@ class App extends Component {
                 nav.style.opacity = "1.0";
             }
         }
-        // alert("Message from developer: 'Under construction!'")
+        alert("Message from developer: 'Under construction!'")
     }
 
     render() {
