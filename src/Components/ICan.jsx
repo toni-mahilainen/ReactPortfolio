@@ -335,8 +335,8 @@ class ICan extends Component {
 
     render() {
         return (
-            <section>
-                <Jumbotron bsPrefix="iCanJumbo" id="iCan">
+            <section id="iCan">
+                <Jumbotron bsPrefix="iCanJumbo">
                     <Container id="iCanList">
                         <h2>I Can</h2>
                         <ul>

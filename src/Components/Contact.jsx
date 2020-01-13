@@ -98,8 +98,8 @@ class Contact extends Component {
 
     render() {
         return (
-            <section>
-                <Jumbotron bsPrefix="contactJumbo" id="contact">
+            <section id="contact">
+                <Jumbotron bsPrefix="contactJumbo">
                     <Container id="contactFormTainer">
                         <h2>Contact me with email...</h2>
                         <div id="contactForm">

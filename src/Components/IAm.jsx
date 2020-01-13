@@ -180,8 +180,8 @@ class IAm extends Component {
 
     render() {
         return (
-            <section>
-                <Jumbotron bsPrefix="iamJumbo" id="iAm">
+            <section id="iAm">
+                <Jumbotron bsPrefix="iamJumbo">
                     <Container id="iamLeft">
                         <img src={myPicture} alt="My pic" height="250"></img>
                         <ul>
