@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Jumbotron, Container } from 'react-bootstrap';
 import myPicture from '../myPicture.jpg';
+import VisibilitySensor from "react-visibility-sensor";
 
 class Details extends Component {
     render() {
@@ -178,59 +179,65 @@ class IAm extends Component {
         }
     }
 
+    onChange(isVisible) {
+        console.log('I´m is now %s', isVisible ? 'visible' : 'hidden');
+    }
+
     render() {
         return (
-            <section id="iAm">
-                <Jumbotron bsPrefix="iamJumbo">
-                    <Container id="iamLeft">
-                        <img src={myPicture} alt="My pic" height="250"></img>
-                        <ul>
-                            <li><span className="myInfoListHeaders">Name:</span> {this.state.Name}</li>
-                            <li><span className="myInfoListHeaders">Birthdate:</span> {this.state.BirthDate}</li>
-                            <li><span className="myInfoListHeaders">Age:</span> {this.state.Age}</li>
-                            <li><span className="myInfoListHeaders">City:</span> {this.state.City}</li>
-                            <li><span className="myInfoListHeaders">Country:</span> {this.state.Country}</li>
-                            <li><span className="myInfoListHeaders">Phone:</span> {this.state.Phone}</li>
-                            <li><span className="myInfoListHeaders">Personal email:</span> {this.state.EmailPersonal}</li>
-                            <li><span className="myInfoListHeaders">Student email:</span> {this.state.EmailStudent}</li>
-                        </ul>
-                    </Container>
-                    <Container id="iamRight">
-                        <table id="iamTable">
-                            <tbody>
-                                <tr>
-                                    <td className="tdHeader"><h2>Basic knowledge</h2></td>
-                                    <td className="tdButton"><button className="showDetailsBtn" onClick={this.ShowHideDetails}><span className="fas fa-chevron-down" id="basic"></span></button></td>
-                                </tr>
-                                <tr>
-                                    <td>{this.state.BasicVisible ? <Details detailsRequest="basic" /> : null}</td>
-                                </tr>
-                                <tr>
-                                    <td className="tdHeader"><h2>Education</h2></td>
-                                    <td className="tdButton"><button className="showDetailsBtn" onClick={this.ShowHideDetails}><span className="fas fa-chevron-down" id="education"></span></button></td>
-                                </tr>
-                                <tr>
-                                    <td>{this.state.EducVisible ? <Details detailsRequest="education" /> : null}</td>
-                                </tr>
-                                <tr>
-                                    <td className="tdHeader"><h2>Work history</h2></td>
-                                    <td className="tdButton"><button className="showDetailsBtn" onClick={this.ShowHideDetails}><span className="fas fa-chevron-down" id="work"></span></button></td>
-                                </tr>
-                                <tr>
-                                    <td>{this.state.WorkVisible ? <Details detailsRequest="work" /> : null}</td>
-                                </tr>
-                                <tr>
-                                    <td className="tdHeader"><h2>Language skills</h2></td>
-                                    <td className="tdButton"><button className="showDetailsBtn" onClick={this.ShowHideDetails}><span className="fas fa-chevron-down" id="language"></span></button></td>
-                                </tr>
-                                <tr>
-                                    <td>{this.state.LangVisible ? <Details detailsRequest="language" /> : null}</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </Container>
-                </Jumbotron>
-            </section>
+            <VisibilitySensor onChange={this.onChange} partialVisibility offset={{top: 600, bottom: 600}}>
+                <section id="iAm">
+                    <Jumbotron bsPrefix="iamJumbo">
+                        <Container id="iamLeft">
+                            <img src={myPicture} alt="My pic" height="250"></img>
+                            <ul>
+                                <li><span className="myInfoListHeaders">Name:</span> {this.state.Name}</li>
+                                <li><span className="myInfoListHeaders">Birthdate:</span> {this.state.BirthDate}</li>
+                                <li><span className="myInfoListHeaders">Age:</span> {this.state.Age}</li>
+                                <li><span className="myInfoListHeaders">City:</span> {this.state.City}</li>
+                                <li><span className="myInfoListHeaders">Country:</span> {this.state.Country}</li>
+                                <li><span className="myInfoListHeaders">Phone:</span> {this.state.Phone}</li>
+                                <li><span className="myInfoListHeaders">Personal email:</span> {this.state.EmailPersonal}</li>
+                                <li><span className="myInfoListHeaders">Student email:</span> {this.state.EmailStudent}</li>
+                            </ul>
+                        </Container>
+                        <Container id="iamRight">
+                            <table id="iamTable">
+                                <tbody>
+                                    <tr>
+                                        <td className="tdHeader"><h2>Basic knowledge</h2></td>
+                                        <td className="tdButton"><button className="showDetailsBtn" onClick={this.ShowHideDetails}><span className="fas fa-chevron-down" id="basic"></span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>{this.state.BasicVisible ? <Details detailsRequest="basic" /> : null}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="tdHeader"><h2>Education</h2></td>
+                                        <td className="tdButton"><button className="showDetailsBtn" onClick={this.ShowHideDetails}><span className="fas fa-chevron-down" id="education"></span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>{this.state.EducVisible ? <Details detailsRequest="education" /> : null}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="tdHeader"><h2>Work history</h2></td>
+                                        <td className="tdButton"><button className="showDetailsBtn" onClick={this.ShowHideDetails}><span className="fas fa-chevron-down" id="work"></span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>{this.state.WorkVisible ? <Details detailsRequest="work" /> : null}</td>
+                                    </tr>
+                                    <tr>
+                                        <td className="tdHeader"><h2>Language skills</h2></td>
+                                        <td className="tdButton"><button className="showDetailsBtn" onClick={this.ShowHideDetails}><span className="fas fa-chevron-down" id="language"></span></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>{this.state.LangVisible ? <Details detailsRequest="language" /> : null}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </Container>
+                    </Jumbotron>
+                </section>
+            </VisibilitySensor>
         )
     }
 }

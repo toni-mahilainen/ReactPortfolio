@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Jumbotron, Container } from 'react-bootstrap';
+import VisibilitySensor from "react-visibility-sensor";
 
 class Examples extends Component {
     render() {
@@ -8,7 +9,7 @@ class Examples extends Component {
                 <Container id="iCanExamples">
                     <h1>C#</h1>
                     <div className="skillLevelBar">
-                        <span className="skillLevel" style={{width: "10%"}}><h5>Skill level</h5></span>
+                        <span className="skillLevel" style={{ width: "10%" }}><h5>Skill level</h5></span>
                     </div>
                 </Container>
             )
@@ -17,7 +18,7 @@ class Examples extends Component {
                 <Container id="iCanExamples">
                     <h1>HTML5 - CSS3 - JavaScript / TypeScript / jQuery</h1>
                     <div className="skillLevelBar">
-                        <span className="skillLevel" style={{width: "20%"}}><h5>Skill level</h5></span>
+                        <span className="skillLevel" style={{ width: "20%" }}><h5>Skill level</h5></span>
                     </div>
                 </Container>
             )
@@ -26,7 +27,7 @@ class Examples extends Component {
                 <Container id="iCanExamples">
                     <h1>Bootstrap</h1>
                     <div className="skillLevelBar">
-                        <span className="skillLevel" style={{width: "30%"}}><h5>Skill level</h5></span>
+                        <span className="skillLevel" style={{ width: "30%" }}><h5>Skill level</h5></span>
                     </div>
                 </Container>
             )
@@ -35,7 +36,7 @@ class Examples extends Component {
                 <Container id="iCanExamples">
                     <h1>ASP.NET MVC</h1>
                     <div className="skillLevelBar">
-                        <span className="skillLevel" style={{width: "40%"}}><h5>Skill level</h5></span>
+                        <span className="skillLevel" style={{ width: "40%" }}><h5>Skill level</h5></span>
                     </div>
                 </Container>
             )
@@ -44,7 +45,7 @@ class Examples extends Component {
                 <Container id="iCanExamples">
                     <h1>ASP.NET Core</h1>
                     <div className="skillLevelBar">
-                        <span className="skillLevel" style={{width: "50%"}}><h5>Skill level</h5></span>
+                        <span className="skillLevel" style={{ width: "50%" }}><h5>Skill level</h5></span>
                     </div>
                 </Container>
             )
@@ -53,7 +54,7 @@ class Examples extends Component {
                 <Container id="iCanExamples">
                     <h1>SQL Server</h1>
                     <div className="skillLevelBar">
-                        <span className="skillLevel" style={{width: "60%"}}><h5>Skill level</h5></span>
+                        <span className="skillLevel" style={{ width: "60%" }}><h5>Skill level</h5></span>
                     </div>
                 </Container>
             )
@@ -62,7 +63,7 @@ class Examples extends Component {
                 <Container id="iCanExamples">
                     <h1>React.js - Node.js</h1>
                     <div className="skillLevelBar">
-                        <span className="skillLevel" style={{width: "70%"}}><h5>Skill level</h5></span>
+                        <span className="skillLevel" style={{ width: "70%" }}><h5>Skill level</h5></span>
                     </div>
                 </Container>
             )
@@ -71,7 +72,7 @@ class Examples extends Component {
                 <Container id="iCanExamples">
                     <h1>Xamarin Forms</h1>
                     <div className="skillLevelBar">
-                        <span className="skillLevel" style={{width: "80%"}}><h5>Skill level</h5></span>
+                        <span className="skillLevel" style={{ width: "80%" }}><h5>Skill level</h5></span>
                     </div>
                 </Container>
             )
@@ -80,7 +81,7 @@ class Examples extends Component {
                 <Container id="iCanExamples">
                     <h1>Azure</h1>
                     <div className="skillLevelBar">
-                        <span className="skillLevel" style={{width: "90%"}}><h5>Skill level</h5></span>
+                        <span className="skillLevel" style={{ width: "90%" }}><h5>Skill level</h5></span>
                     </div>
                 </Container>
             )
@@ -89,7 +90,7 @@ class Examples extends Component {
                 <Container id="iCanExamples">
                     <h1>GitHub</h1>
                     <div className="skillLevelBar">
-                        <span className="skillLevel" style={{width: "100%"}}><h5>Skill level</h5></span>
+                        <span className="skillLevel" style={{ width: "100%" }}><h5>Skill level</h5></span>
                     </div>
                 </Container>
             )
@@ -333,37 +334,43 @@ class ICan extends Component {
         }
     }
 
+    onChange(isVisible) {
+        console.log('I Can is now %s', isVisible ? 'visible' : 'hidden');
+    }
+
     render() {
         return (
-            <section id="iCan">
-                <Jumbotron bsPrefix="iCanJumbo">
-                    <Container id="iCanList">
-                        <h2>I Can</h2>
-                        <ul>
-                            <li>C# <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="csharp"></span></button></li>
-                            <li>HTML5 - CSS3 - JavaScript / TypeScript / jQuery <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="htmletc"></span></button></li>
-                            <li>Bootstrap <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="bootstrap"></span></button></li>
-                            <li>ASP.NET MVC <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="mvc"></span></button></li>
-                            <li>ASP.NET Core <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="core"></span></button></li>
-                            <li>SQL Server <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="sql"></span></button></li>
-                            <li>React.js - Node.js <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="reactnode"></span></button></li>
-                            <li>Xamarin Forms <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="xamarin"></span></button></li>
-                            <li>Azure <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="azure"></span></button></li>
-                            <li>GitHub <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="github"></span></button></li>
-                        </ul>
-                    </Container>
-                    {this.state.CSharpVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
-                    {this.state.HtmlEtcVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
-                    {this.state.BootstrapVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
-                    {this.state.MvcVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
-                    {this.state.CoreVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
-                    {this.state.SqlVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
-                    {this.state.ReactNodeVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
-                    {this.state.XamarinVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
-                    {this.state.AzureVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
-                    {this.state.GitHubVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
-                </Jumbotron>
-            </section>
+            <VisibilitySensor onChange={this.onChange} partialVisibility offset={{top: 600, bottom: 600}}>
+                <section id="iCan">
+                    <Jumbotron bsPrefix="iCanJumbo">
+                        <Container id="iCanList">
+                            <h2>I Can</h2>
+                            <ul>
+                                <li>C# <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="csharp"></span></button></li>
+                                <li>HTML5 - CSS3 - JavaScript / TypeScript / jQuery <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="htmletc"></span></button></li>
+                                <li>Bootstrap <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="bootstrap"></span></button></li>
+                                <li>ASP.NET MVC <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="mvc"></span></button></li>
+                                <li>ASP.NET Core <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="core"></span></button></li>
+                                <li>SQL Server <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="sql"></span></button></li>
+                                <li>React.js - Node.js <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="reactnode"></span></button></li>
+                                <li>Xamarin Forms <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="xamarin"></span></button></li>
+                                <li>Azure <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="azure"></span></button></li>
+                                <li>GitHub <button onClick={this.ShowHideExamples}><span className="fas fa-chevron-right" id="github"></span></button></li>
+                            </ul>
+                        </Container>
+                        {this.state.CSharpVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
+                        {this.state.HtmlEtcVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
+                        {this.state.BootstrapVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
+                        {this.state.MvcVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
+                        {this.state.CoreVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
+                        {this.state.SqlVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
+                        {this.state.ReactNodeVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
+                        {this.state.XamarinVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
+                        {this.state.AzureVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
+                        {this.state.GitHubVisible ? <Examples exampleRequest={this.state.ExampleRequestState} /> : null}
+                    </Jumbotron>
+                </section>
+            </VisibilitySensor>
         )
     }
 }
