@@ -281,6 +281,28 @@ nav a {
   outline: none;
 }
 
+#exampleWorks {
+  width: 100%;
+  padding: 20px 0;
+  color: aqua;
+}
+
+.tab-content {
+  clear: both;
+}
+
+#tblExampleWorks td {
+  margin: 20px 0;
+}
+
+.exWorkSpan {
+  font-size: 6rem;
+  background-color: blue;
+  height: 150px;
+  width: 150px;
+  margin: 0 5px;
+}
+
 @keyframes iCanExamplesVisible {
   from {
     background-color: rgba(83, 83, 83, 0.0);

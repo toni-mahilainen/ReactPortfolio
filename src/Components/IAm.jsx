@@ -9,7 +9,7 @@ class Details extends Component {
             return (
                 <div id="infoDiv">
                     <p>
-                        Olen 32 vuotias kihloissa oleva Forssalainen mies. Asun tyttöystäväni kanssa Forssan Vieremän asuinalueella rivitalo asunnossa jonka ostimme vuonna 2016 heinäkuussa.
+                        Olen 32 vuotias kihloissa oleva Forssalainen mies. Asun tyttöystäväni kanssa Forssan Vieremän asuinalueella rivitaloasunnossa, jonka ostimme vuonna 2016 heinäkuussa. <br/><br/>
                         Työntekijänä olen tehokas, järjestelmällinen, oma-aloitteinen ja hoidan työni loppuun.
                         Omaan rauhallisen luonteen, loogisen ajattelutavan sekä kyvyt ongelmien ratkaisuun myös kiireellisissä tilanteissa.
                         Pidän haasteellisista ja monipuolisista työtehtävistä, olen nopea oppimaan uusia asioita ja haluan kehittyä työssäni.
