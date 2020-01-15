@@ -6,11 +6,11 @@ class Navigation extends Component {
         let clicked = e.currentTarget;
         
         // luodaan a elementeistä kokoelma
-        var btnContainer = document.getElementById("nav");
-        var aCollection = btnContainer.getElementsByTagName("a");
+        let btnContainer = document.getElementById("nav");
+        let aCollection = btnContainer.getElementsByTagName("a");
 
         // poistetaan kaikista a elementeistä luokka atribuutti
-        for (var i = 0; i < aCollection.length; i++) {
+        for (let i = 0; i < aCollection.length; i++) {
             aCollection[i].removeAttribute("class");
         }
 
@@ -22,10 +22,10 @@ class Navigation extends Component {
         return (
             <nav id="navbar" className="navbar sticky-top justify-content-center">
                 <ul className="nav" id="nav">
-                    <li><a href="#home" className="active" onClick={this.highlightNav}>HOME</a></li>
-                    <li><a href="#iAm" onClick={this.highlightNav}>I AM</a></li>
-                    <li><a href="#iCan" onClick={this.highlightNav}>I CAN</a></li>
-                    <li><a href="#contact" onClick={this.highlightNav}>CONTACT</a></li>
+                    <li><a id="aHome" href="#home" className="active" onClick={this.highlightNav}>HOME</a></li>
+                    <li><a id="aIam" href="#iAm" onClick={this.highlightNav}>I AM</a></li>
+                    <li><a id="aIcan" href="#iCan" onClick={this.highlightNav}>I CAN</a></li>
+                    <li><a id="aContact" href="#contact" onClick={this.highlightNav}>CONTACT</a></li>
                 </ul>
             </nav>
         )

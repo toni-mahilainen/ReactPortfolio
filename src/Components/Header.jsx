@@ -4,12 +4,14 @@ import VisibilitySensor from "react-visibility-sensor";
 
 class Header extends Component {
     onChange(isVisible) {
-        console.log('Home is now %s', isVisible ? 'visible' : 'hidden');
+        // jos sivun osa riittävästi näkyvissä, lisätään luokkamääritys a tagiin
+        let a = document.getElementById("aHome");
+        isVisible ? a.setAttribute("class", "active") : a.removeAttribute("class");
     }
 
     render() {
         return (
-            <VisibilitySensor onChange={this.onChange} partialVisibility offset={{ top: 600 }}>
+            <VisibilitySensor onChange={this.onChange} partialVisibility offset={{ top: 350 }}>
                 <header>
                     <Jumbotron bsPrefix="headerJumbo">
                         <Container>

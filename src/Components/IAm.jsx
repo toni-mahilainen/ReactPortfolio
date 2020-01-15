@@ -9,45 +9,76 @@ class Details extends Component {
             return (
                 <div id="infoDiv">
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ultricies dui ut neque porta gravida.
-                        Nullam accumsan arcu ac sapien faucibus maximus. Suspendisse tristique auctor nulla, sit amet auctor mauris scelerisque sed.
-                        Donec tempor diam ut urna congue, sit amet semper risus pulvinar. Fusce bibendum porttitor velit. Sed augue lectus, dapibus in ex sed, auctor egestas nulla.
-                        Nam in metus rutrum, viverra dui vitae, eleifend ipsum. Etiam finibus sodales nisl, sit amet fringilla elit iaculis id.
+                        Olen 32 vuotias kihloissa oleva Forssalainen mies. Asun tyttöystäväni kanssa Forssan Vieremän asuinalueella rivitalo asunnossa jonka ostimme vuonna 2016 heinäkuussa.
+                        Työntekijänä olen tehokas, järjestelmällinen, oma-aloitteinen ja hoidan työni loppuun.
+                        Omaan rauhallisen luonteen, loogisen ajattelutavan sekä kyvyt ongelmien ratkaisuun myös kiireellisissä tilanteissa.
+                        Pidän haasteellisista ja monipuolisista työtehtävistä, olen nopea oppimaan uusia asioita ja haluan kehittyä työssäni.
                     </p>
                 </div>
             )
         } else if (this.props.detailsRequest === "education") {
             return (
                 <div id="infoDiv">
-                    <p>
-                        Pellentesque ac lorem sagittis, dapibus augue id, pretium massa. Aliquam consequat posuere ante elementum sollicitudin.
-                        Etiam id nisl augue. Nulla ultricies ornare iaculis. Phasellus neque metus, accumsan in neque eget, congue tristique velit.
-                        Nam nec congue ex. Nunc ut auctor urna.
-                    </p>
+                <table className="iamTable">
+                <thead>
+                    <tr>
+                        <th className="thEducation">Koulu</th>
+                        <th className="thEducation">Lisätiedot</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td className="tdEducation">Careeria Porvoo</td>
+                        <td className="tdEducation">Datanomi / Ohjelmistotuotanto</td>
+                    </tr>
+                    <tr>
+                        <td className="tdEducation">Kosken Lukio</td>
+                        <td className="tdEducation">Kursseja suoritettu 52 kpl</td>
+                    </tr>
+                    <tr>
+                        <td className="tdEducation">Kosken seudun ala- ja yläaste</td>
+                        <td className="tdEducation">Peruskoulu</td>
+                    </tr>
+                </tbody>
+            </table>
                 </div>
             )
         } else if (this.props.detailsRequest === "work") {
             return (
                 <div id="infoDiv">
-                    <p>
-                        Pellentesque ut cursus magna. Nullam sollicitudin rhoncus interdum. Nulla tellus tortor, rhoncus vel egestas eget, euismod eu augue.
-                        Sed porta neque quam, non varius quam malesuada quis. Vivamus hendrerit ligula sed lacinia tempus. Cras sit amet pretium felis.
-                        Nullam scelerisque libero varius nibh dignissim congue. Vestibulum condimentum ipsum velit, eu vehicula ipsum sodales ut.
-                        Ut rutrum bibendum velit, vitae dapibus erat viverra non. Aenean scelerisque at nibh a pharetra. Integer sem metus, porta et massa eu, suscipit rhoncus dui.
-                        Aliquam a aliquam nunc, a mollis tortor. Ut et ex diam. Praesent porta molestie ipsum, quis ultricies orci iaculis a.
-                        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Quisque sed egestas nulla, sit amet rhoncus ex.
-                    </p>
+                    <table className="iamTable">
+                        <thead>
+                            <tr>
+                                <th className="thWork">Yritys</th>
+                                <th className="thWork">Aika</th>
+                                <th className="thWork">Ammattinimike</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td className="tdWork">HK Scan Finland Oy</td>
+                                <td className="tdWork">05/2016 - 09/2019</td>
+                                <td className="tdWork">Varastotyöntekijä</td>
+                            </tr>
+                            <tr>
+                                <td className="tdWork">Pakastamo Oy</td>
+                                <td className="tdWork">02/2008 - 05/2016</td>
+                                <td className="tdWork">Varastotyöntekijä</td>
+                            </tr>
+                            <tr>
+                                <td className="tdWork">Nokia Oy</td>
+                                <td className="tdWork">09/2006 - 02/2008</td>
+                                <td className="tdWork">Elektroniikka-asentaja</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             )
         } else if (this.props.detailsRequest === "language") {
             return (
                 <div id="infoDiv">
                     <p>
-                        Praesent rutrum lacus sit amet bibendum rutrum. Integer vel luctus est, sit amet aliquet mauris. In placerat porttitor consectetur.
-                        Ut ac dolor aliquam est fringilla cursus a eu ex. Cras iaculis rhoncus ipsum, non venenatis mi tincidunt ut. Curabitur rhoncus sem a arcu vestibulum, sit amet laoreet quam consequat.
-                        In tempor metus neque, quis ultricies quam commodo non. Nulla eu condimentum massa. Nam nec rutrum tortor. Quisque luctus diam ut scelerisque tincidunt.
-                        Curabitur blandit, lacus in venenatis eleifend, ligula magna egestas neque, at elementum libero mauris porttitor ligula.
-                        Nulla fermentum libero in sem rhoncus, eget euismod libero rutrum. Nam quis risus sed libero dignissim aliquam. Phasellus faucibus tellus auctor, dapibus ante id, lobortis erat.
+                        Finnish, English
                     </p>
                 </div>
             )
@@ -180,12 +211,14 @@ class IAm extends Component {
     }
 
     onChange(isVisible) {
-        console.log('I´m is now %s', isVisible ? 'visible' : 'hidden');
+        // jos sivun osa riittävästi näkyvissä, lisätään luokkamääritys a tagiin
+        let a = document.getElementById("aIam");
+        isVisible ? a.setAttribute("class", "active") : a.removeAttribute("class");
     }
 
     render() {
         return (
-            <VisibilitySensor onChange={this.onChange} partialVisibility offset={{top: 600, bottom: 600}}>
+            <VisibilitySensor onChange={this.onChange} partialVisibility offset={{ top: 350, bottom: 350 }}>
                 <section id="iAm">
                     <Jumbotron bsPrefix="iamJumbo">
                         <Container id="iamLeft">
@@ -202,35 +235,35 @@ class IAm extends Component {
                             </ul>
                         </Container>
                         <Container id="iamRight">
-                            <table id="iamTable">
+                            <table className="iamTable">
                                 <tbody>
                                     <tr>
                                         <td className="tdHeader"><h2>Basic knowledge</h2></td>
                                         <td className="tdButton"><button className="showDetailsBtn" onClick={this.ShowHideDetails}><span className="fas fa-chevron-down" id="basic"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>{this.state.BasicVisible ? <Details detailsRequest="basic" /> : null}</td>
+                                        <td className="tdInfoDiv">{this.state.BasicVisible ? <Details detailsRequest="basic" /> : null}</td>
                                     </tr>
                                     <tr>
                                         <td className="tdHeader"><h2>Education</h2></td>
                                         <td className="tdButton"><button className="showDetailsBtn" onClick={this.ShowHideDetails}><span className="fas fa-chevron-down" id="education"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>{this.state.EducVisible ? <Details detailsRequest="education" /> : null}</td>
+                                        <td className="tdInfoDiv">{this.state.EducVisible ? <Details detailsRequest="education" /> : null}</td>
                                     </tr>
                                     <tr>
                                         <td className="tdHeader"><h2>Work history</h2></td>
                                         <td className="tdButton"><button className="showDetailsBtn" onClick={this.ShowHideDetails}><span className="fas fa-chevron-down" id="work"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>{this.state.WorkVisible ? <Details detailsRequest="work" /> : null}</td>
+                                        <td className="tdInfoDiv">{this.state.WorkVisible ? <Details detailsRequest="work" /> : null}</td>
                                     </tr>
                                     <tr>
                                         <td className="tdHeader"><h2>Language skills</h2></td>
                                         <td className="tdButton"><button className="showDetailsBtn" onClick={this.ShowHideDetails}><span className="fas fa-chevron-down" id="language"></span></button></td>
                                     </tr>
                                     <tr>
-                                        <td>{this.state.LangVisible ? <Details detailsRequest="language" /> : null}</td>
+                                        <td className="tdInfoDiv">{this.state.LangVisible ? <Details detailsRequest="language" /> : null}</td>
                                     </tr>
                                 </tbody>
                             </table>

@@ -335,12 +335,14 @@ class ICan extends Component {
     }
 
     onChange(isVisible) {
-        console.log('I Can is now %s', isVisible ? 'visible' : 'hidden');
+        // jos sivun osa riittävästi näkyvissä, lisätään luokkamääritys a tagiin
+        let a = document.getElementById("aIcan");
+        isVisible ? a.setAttribute("class", "active") : a.removeAttribute("class");
     }
 
     render() {
         return (
-            <VisibilitySensor onChange={this.onChange} partialVisibility offset={{top: 600, bottom: 600}}>
+            <VisibilitySensor onChange={this.onChange} partialVisibility offset={{top: 350, bottom: 350}}>
                 <section id="iCan">
                     <Jumbotron bsPrefix="iCanJumbo">
                         <Container id="iCanList">

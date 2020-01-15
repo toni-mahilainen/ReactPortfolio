@@ -100,12 +100,14 @@ class Contact extends Component {
     }
 
     onChange(isVisible) {
-        console.log('Contact is now %s', isVisible ? 'visible' : 'hidden');
+        // jos sivun osa riittävästi näkyvissä, lisätään luokkamääritys a tagiin
+        let a = document.getElementById("aContact");
+        isVisible ? a.setAttribute("class", "active") : a.removeAttribute("class");
     }
 
     render() {
         return (
-            <VisibilitySensor onChange={this.onChange} partialVisibility offset={{top: 600, bottom: 600}}>
+            <VisibilitySensor onChange={this.onChange} partialVisibility offset={{top: 350, bottom: 350}}>
                 <section id="contact">
                     <Jumbotron bsPrefix="contactJumbo">
                         <Container id="contactFormTainer">

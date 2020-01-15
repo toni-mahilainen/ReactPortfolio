@@ -47,7 +47,7 @@ table {
 /* --------------------------------NAVIGATION-------------------------------- */
 
 nav {
-  background-color: #333;
+  background-color: rgb(61, 61, 61);
 }
 
 nav li {
@@ -61,7 +61,7 @@ nav a {
 }
 
 .active {
-  color: rgb(231, 203, 187);
+  color: rgb(218, 190, 174);
 }
 
 /* --------------------------------NAV-------------------------------- */
@@ -111,7 +111,7 @@ nav a {
 
 #iamLeft {
   height: 80vh;
-  width: 33%;
+  width: 34%;
   border-radius: 20px;
   align-self: center;
   margin-left: 40px;
@@ -139,7 +139,7 @@ nav a {
 #iamRight {
   text-align: center;
   height: 80vh;
-  width: 33%;
+  width: 34%;
   border-radius: 20px;
   align-self: center;
   margin-right: 40px;
@@ -148,7 +148,7 @@ nav a {
   box-shadow: -10px 10px 5px 0px rgba(0,0,0,0.6);
 }
 
-#iamTable {
+.iamTable {
   width: 100%;
 }
 
@@ -160,11 +160,46 @@ nav a {
   width: 10%;
 }
 
+.tdInfoDiv {
+  width: 100%;
+}
+
+.thEducation {
+  width: 50%;
+  color: rgb(204, 178, 163);
+  text-shadow: black 1px 1px 2px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+.tdEducation {
+  width: 50%;
+  line-height: 20px;
+  text-align: left;
+}
+
+.thWork {
+  width: 33%;
+  color: rgb(204, 178, 163);
+  text-shadow: black 1px 1px 2px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+  text-align: left;
+}
+
+.tdWork {
+  width: 33%;
+  line-height: 20px;
+  text-align: left;
+}
+
 #infoDiv{
+  width: 100%;
   color: rgb(231, 203, 187);
   font-size: 1rem;
   letter-spacing: 1px;
-  margin: 5px 0;
+  padding: 10px 0;
   animation-name: fadeInDown;
   animation-duration: 0.5s;
 }
@@ -356,7 +391,7 @@ nav a {
 
 .footerJumbo {
   min-height: 20vh;
-  background-color: #333;
+  background-color: rgb(61, 61, 61);
   color: darkturquoise;
   text-align: center;
   display: flex;
